@@ -2,19 +2,16 @@
   "name": "weather-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "netlify-lambda serve src/functions --config ./webpack.config.js",
+    "build": "netlify-lambda build src/functions --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "telegraf": "^4.7.0"
-  },
-  "devDependencies": {
-    "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "netlify-lambda": "^2.0.15",
+    "telegraf": "^3.36.0"
   }
 }
