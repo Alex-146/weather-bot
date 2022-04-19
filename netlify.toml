@@ -1,2 +1,3 @@
 [build]
   functions = "lambda"
+  command = "netlify-lambda install"
