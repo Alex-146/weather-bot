@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "netlify-lambda serve src/functions --config ./webpack.config.js",
-    "build": "netlify-lambda build src/functions --config ./webpack.config.js"
+    "build": "netlify-lambda build src/functions --config ./webpack.config.js",
+    "dev": "nodemon src/core/bot.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,9 @@
   "dependencies": {
     "netlify-lambda": "^2.0.15",
     "telegraf": "^3.36.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
   }
 }

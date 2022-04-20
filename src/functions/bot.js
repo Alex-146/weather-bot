@@ -1,10 +1,10 @@
 const { Telegraf } = require("telegraf")
 
+const { useHandlers } = require("../core/handlers")
+
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
 
-bot.on("text", ctx => {
-  ctx.reply(ctx.message.text)
-})
+useHandlers(bot)
 
 exports.handler = async (event) => {
   try {
